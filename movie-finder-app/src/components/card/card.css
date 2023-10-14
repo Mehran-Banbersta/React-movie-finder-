@@ -1,0 +1,169 @@
+:root {
+  --secondary-color: rgb(164, 30, 30);
+}
+
+.movie_container {
+  box-shadow: 0 5px 10 px rgb(0, 0, 0, 0.5);
+  background-color: var(--secondary-color);
+  margin: 0.5rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.movie_container .poster {
+  width: 100%;
+  height: 290px;
+}
+
+.movie_detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie_detail .box {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(232, 233, 234);
+}
+
+.release_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+  padding-bottom: 1rem;
+}
+
+.info,
+.language {
+  color: aliceblue;
+}
+
+.more_info_btn {
+  padding: 0.3rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.movie_detail .title {
+  width: 160px;
+}
+
+.movie_detail .overview {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 100%;
+  opacity: 1;
+  color: aliceblue;
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
+  overflow-y: auto;
+  transform: translateY(101%);
+  background-color: rgb(70, 67, 67);
+}
+
+.movie_detail:hover .overview {
+  transform: translateY(0%);
+}
+
+.rating {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) and (max-width: 767px) {
+  .movie_container {
+    width: 45%;
+  }
+
+  .movie_container .poster {
+    height: 200px;
+  }
+
+  .movie_detail .box {
+    width: 100%;
+    padding: 0.3rem;
+    color: rgb(229, 233, 238);
+  }
+
+  .movie_detail .title {
+    width: 160px;
+  }
+  .info,
+  .language {
+    font-size: 0.8rem;
+    color: aliceblue;
+  }
+  .more_info_btn {
+    padding: 0.3rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    font-size: 0.7rem;
+  }
+  .release_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 4;
+    padding-bottom: 1rem;
+  }
+  .movie_detail .overview {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-height: 100%;
+    opacity: 1;
+    color: aliceblue;
+    box-sizing: border-box;
+    padding: 1rem;
+    transition: all 0.4s ease-in-out;
+    overflow-y: auto;
+    transform: translateY(101%);
+    background-color: rgb(70, 67, 67);
+  }
+
+  .movie_detail:hover .overview {
+    transform: translateY(0%);
+  }
+
+  .overview h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .rating {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+}

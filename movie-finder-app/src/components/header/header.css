@@ -1,0 +1,233 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: rgb(248, 6, 6);
+}
+
+.header {
+  background-image: url('https://i.pinimg.com/originals/09/48/f3/0948f3d5837a3a10c313ae0b9e0d50a0.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: top center; 
+  height: 60vh;
+  width: 100vw;
+  padding: 1rem;
+}
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: black;
+  border-radius: 10px;
+  opacity: 0.8;
+  border-bottom: 0.3px solid var(--primary-color);
+}
+a.logo {
+  color: #fff;
+  margin-right: 2rem;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.red_text {
+  color: var(--primary-color);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  margin-right: 0.7rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  height: 4px;
+  width: 0;
+  transform: translate(-50%);
+  background-color: var(--primary-color);
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+nav ul li a:focus {
+  background-color: var(--primary-color);
+  opacity: 0.4s;
+  border-radius: 20px;
+}
+
+nav ul li a:focus::before {
+  width: 10%;
+}
+.search_input {
+  display: flex;
+  align-items: center;
+}
+
+.input_text {
+  outline: none;
+  border: none;
+  border-radius: 0.7rem 0 0 0.7rem;
+  height: 40px;
+  padding: 0 1rem;
+  font-size: 1rem;
+  color: rgb(122, 114, 114);
+  background-color: #fff;
+}
+
+.submit_btn {
+  border-radius: 0rem 0.7rem 0.7rem 0rem;
+  padding: 0 1rem;
+  height: 40px;
+  background-color: var(--primary-color);
+  outline: none;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.input_text::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.search_btn button {
+  background-color: var(--secondary-color);
+  box-shadow: inset 0px 5px 10px var(--secondary-color);
+  padding: 0.4rem 0.7rem;
+  border-radius: 0 2rem 2rem 0;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header_desc {
+  margin-top: 8rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.header_title {
+  margin: 2rem 0;
+}
+
+@media (max-width: 576px) and (max-width: 767px) {
+  .nav_bar {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .header {
+    background-position: center center;
+    height: 400px;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+
+  nav ul li {
+    list-style: none;
+    margin-right: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  a.logo {
+    color: #fff;
+    margin-right: 0.6rem;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+  .input_text {
+    padding: 0 0.2rem;
+    height: 30px;
+    width: 144px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: rgb(102, 95, 95);
+  }
+
+  .submit_btn {
+    font-size: 0.8rem;
+    border-radius: 0rem 0.7rem 0.7rem 0rem;
+    padding: 0 0.2rem;
+    height: 30px;
+    font-weight: bold;
+  }
+
+  .header_desc {
+    margin-left: 2rem;
+    margin-top: 5rem;
+
+    font-size: 1rem;
+    color: #fff;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Your styles here */
+}
+
+/* For desktops and small laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav_bar {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin-right: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+/* For large laptops and desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .input_text {
+    padding: 0 0.2rem;
+
+    width: 280px;
+  }
+  nav ul li {
+    margin-right: 1.2rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .input_text {
+    padding: 0 0.2rem;
+
+    width: 400px;
+  }
+  .header_desc {
+    margin-left: 4rem;
+    margin-top: 4rem;
+
+    font-size: 2rem;
+    color: #fff;
+  }
+}
